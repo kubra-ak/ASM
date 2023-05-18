@@ -1,0 +1,62 @@
+[oracle@rac-node01 ~]$ srvctl config scan
+SCAN name: rac-scan, Network: 1
+Subnet IPv4: 192.168.63.0/255.255.255.0/bondeth0, static
+Subnet IPv6: 
+SCAN 0 IPv4 VIP: 192.168.63.12
+SCAN VIP is enabled.
+SCAN VIP is individually enabled on nodes: 
+SCAN VIP is individually disabled on nodes: 
+SCAN 1 IPv4 VIP: 192.168.63.13
+SCAN VIP is enabled.
+SCAN VIP is individually enabled on nodes: 
+SCAN VIP is individually disabled on nodes: 
+SCAN 2 IPv4 VIP: 192.168.63.14
+SCAN VIP is enabled.
+SCAN VIP is individually enabled on nodes: 
+SCAN VIP is individually disabled on nodes: 
+[oracle@rac-node01 ~]$ 
+[oracle@rac-node01 ~]$ 
+
+
+[oracle@rac-node01 ~]$ srvctl config scan_listener
+SCAN Listener LISTENER_SCAN1 exists. Port: TCP:1521
+Registration invited nodes: 
+Registration invited subnets: 
+SCAN Listener is enabled.
+SCAN Listener is individually enabled on nodes: 
+SCAN Listener is individually disabled on nodes: 
+SCAN Listener LISTENER_SCAN2 exists. Port: TCP:1521
+Registration invited nodes: 
+Registration invited subnets: 
+SCAN Listener is enabled.
+SCAN Listener is individually enabled on nodes: 
+SCAN Listener is individually disabled on nodes: 
+SCAN Listener LISTENER_SCAN3 exists. Port: TCP:1521
+Registration invited nodes: 
+Registration invited subnets: 
+SCAN Listener is enabled.
+SCAN Listener is individually enabled on nodes: 
+SCAN Listener is individually disabled on nodes: 
+[oracle@rac-node01 ~]$ 
+[oracle@rac-node01 ~]$ 
+
+
+[oracle@rac-node01 ~]$ srvctl status scan_listener
+SCAN Listener LISTENER_SCAN1 is enabled
+SCAN listener LISTENER_SCAN1 is running on node rac-node01
+SCAN Listener LISTENER_SCAN2 is enabled
+SCAN listener LISTENER_SCAN2 is running on node rac-node02
+SCAN Listener LISTENER_SCAN3 is enabled
+SCAN listener LISTENER_SCAN3 is running on node rac-node02
+[oracle@rac-node01 ~]$ 
+[oracle@rac-node01 ~]$ 
+
+
+[oracle@rac-node01 ~]$ srvctl status scan
+SCAN VIP scan1 is enabled
+SCAN VIP scan1 is running on node rac-node01
+SCAN VIP scan2 is enabled
+SCAN VIP scan2 is running on node rac-node02
+SCAN VIP scan3 is enabled
+SCAN VIP scan3 is running on node rac-node02
+[oracle@rac-node01 ~]$
