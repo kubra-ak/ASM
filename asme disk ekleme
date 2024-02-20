@@ -1,6 +1,14 @@
 oracleasm createdisk DATAC307 "/dev/mapper/DATAC307"
 
-test için create-drop
+oracleasm listdisk
+oracleasm scandisk
+
+alter diskgroup DATA_THORDR add disk '/dev/oracleasm/disks/DATAC307';
+
+
+
+
+*****test için create-drop
 CREATE DISKGROUP deneme EXTERNAL REDUNDANCY DISK  '/dev/oracleasm/disks/DATAC307';
 
 alter diskgroup DATA_THORDR add disk '/dev/oracleasm/disks/DATAC307';
