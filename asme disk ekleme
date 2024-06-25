@@ -1,7 +1,7 @@
 oracleasm createdisk DATAC1 "/dev/mapper/DATAC1"
 
-oracleasm listdisk
-oracleasm scandisk
+oracleasm listdisks
+oracleasm scandisks
 
 alter diskgroup DATAadd disk '/dev/oracleasm/disks/DATAC1';
 
