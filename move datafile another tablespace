@@ -1,0 +1,1 @@
+alter   database        move    datafile        1072    to      '+RECOC2';
