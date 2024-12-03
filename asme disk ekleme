@@ -1,9 +1,12 @@
+root ile
+
 oracleasm createdisk DATAC1 "/dev/mapper/DATAC1"
 
 oracleasm listdisks
 oracleasm scandisks
 
-alter diskgroup DATAadd disk '/dev/oracleasm/disks/DATAC1';
+sqlplus / as sysasm
+alter diskgroup DATA add disk '/dev/oracleasm/disks/DATAC1';
 
 
 
